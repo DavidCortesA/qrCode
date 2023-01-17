@@ -1,0 +1,28 @@
+{
+  "homepage": "",
+  "author": {
+    "name": "David Cortez",
+    "email": "david.cortes.ayala@hotmail.com"
+  },
+  "name": "qr-code",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "qrcode.react": "^3.1.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "sass": "^1.57.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
