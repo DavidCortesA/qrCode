@@ -6,6 +6,7 @@ export default function App() {
   return (
     <div className="section container">
       <QrCode />
+      <p>Made by David Cortez</p>
     </div>
   );
 }

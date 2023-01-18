@@ -6,7 +6,6 @@ const QrCode = () => {
   const [bgColor, setBgColor] = useState('#ffffff');
   const [fgColor, setFgColor] = useState('#000000');
   const [margin, setMargin] = useState(false);
-  const [size, setSize] = useState('300');
   const qrRef = useRef();
 
   const downloadQRCode = (e) => {
@@ -37,15 +36,11 @@ const QrCode = () => {
     setMargin(e.target.checked);
   };
 
-  const selectSize = (e) => {
-    setSize(e.target.value);
-  };
-
   const qrcode = (
     <QRCodeCanvas
       id="qrCode"
       value={url}
-      size={size}
+      size={300}
       level={'H'}
       bgColor={bgColor}
       fgColor={fgColor}
@@ -91,14 +86,6 @@ const QrCode = () => {
               type="checkbox"
               onChange={selectMargin}
               className="checkbox"
-            />
-            <label>Size</label>
-            <input
-              type="range"
-              value={size}
-              min={100}
-              max={600}
-              onChange={selectSize}
             />
           </div>
           <br />

@@ -16,14 +16,15 @@ $font-color: 230 35% 7%;
 
 body {
   color: hsl($font-color);
+  background-color: #eae7ca;
 }
 
 .qrcode__container {
-  @include dFlex(center, center);
+  @include dFlex(space-evenly, center);
   flex-direction: column;
-  gap: 10px;
-  padding: 30px;
+  gap: 30px;
   border-radius: 8px;
+  padding: 2em 2em;
   background: linear-gradient(
     342deg,
     rgba(38, 138, 178, 1) 0%,
@@ -40,6 +41,15 @@ img {
   padding: 2em 0;
   min-height: 100vh;
   @include dFlex(center, center);
+  flex-direction: column;
+}
+
+p{
+  color: #1c1c1c;
+  position:relative;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 2em;
 }
 
 .container {
@@ -52,23 +62,24 @@ form {
   @include dFlex(center, flex-start);
   flex-direction: column;
   gap: 10px;
-  width: 100%;
+  width: 300px;
   .input__group--link {
-    padding: 0.75em 1em;
     width: 100%;
+    padding: 1em;
     border: none;
     border-bottom: 1px solid hsl($font-color);
     background-color: transparent;
     &[type='text'],
-    &::placeholder {
+    &::placeholder,
+    &:focus {
       color: white;
       opacity: 1;
+      font-style: italic;
+      outline: none;
     }
   }
-  .checkbox:checked:before {
-    background-color: red;
-  }
   label {
+    color: white;
     font-size: 16px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -101,16 +112,14 @@ button {
 
 @media (min-width: 768px) {
   .qrcode__container {
-    @include dFlex(center, space-around);
+    @include dFlex(space-between, center);
     flex-direction: row;
-    width: 700px;
-    gap: 30px;
+    width: auto;
+    gap: 50px;
+    padding: 2em 4em;
   }
 
   form,
-  .input__group--link {
-    width: 100%;
-  }
   .section {
     padding: 0;
   }
