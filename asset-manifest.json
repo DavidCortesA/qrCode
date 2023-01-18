@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/qrCode/static/css/main.8403fab8.css",
+    "main.js": "/qrCode/static/js/main.625cbebb.js",
+    "index.html": "/qrCode/index.html",
+    "main.8403fab8.css.map": "/qrCode/static/css/main.8403fab8.css.map",
+    "main.625cbebb.js.map": "/qrCode/static/js/main.625cbebb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8403fab8.css",
+    "static/js/main.625cbebb.js"
+  ]
+}
